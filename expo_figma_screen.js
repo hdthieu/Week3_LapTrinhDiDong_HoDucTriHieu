@@ -1,11 +1,15 @@
 import React from 'react';
-import { View, Image, StyleSheet, Button, Text } from 'react-native';
+import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
 
-const DisplayAnImage = () => {
+const LoginScreen = () => {
   return (
     <View style={{ flex: 1, backgroundColor: '#00CCF9' }}>
-      <View style={{ flex: 3, backgroundColor: 'red' }}></View>
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <View style={{flex: 1, justifyContent: 'center', alignItems:'center', top: 67}}>
+        <View style={styles.outerCircle}>
+          <View style={styles.innerCircle}></View>
+        </View>
+      </View>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', top: 70 }}>
         <Text style={[styles.baseText, styles.titleText]}>GROW </Text>
         <Text style={[styles.baseText, styles.titleText]}>YOUR BUSINESS</Text>
       </View>
@@ -27,40 +31,59 @@ const DisplayAnImage = () => {
           alignItems: 'center',
           justifyContent: 'space-evenly',
         }}>
-        <Button
-          style={(styles.button, styles.buttonText)}
-          title="LOGIN"
-          color="#E3C000"></Button>
-        <Button style={styles.button} title="SIGN UP" color="#E3C000"></Button>
+        <TouchableOpacity style={[styles.button, { backgroundColor: '#E3C000' }]}>
+          <Text style={styles.buttonText}>LOGIN</Text>
+        </TouchableOpacity>
+     
+        <TouchableOpacity style={[styles.button, { backgroundColor: '#E3C000' }]}>
+          <Text style={styles.buttonText}>SIGN UP</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
 };
+
 const styles = StyleSheet.create({
   button: {
     padding: 15,
-    borderTopLeftRadius: 55,
-    borderTopRightRadius: 25,
-    borderBottomLeftRadius: 25,
-    borderBottomRightRadius: 55,
     justifyContent: 'center',
     alignItems: 'center',
-    width: '60%',
+    width: 119, // Fixed width without quotes
+    borderRadius: 5,
   },
   buttonText: {
-    color: 'black',
+    color: 'dark', // White text for better visibility
     fontSize: 18,
+    fontWeight: '700',
   },
   baseText: {
     fontFamily: 'Roboto',
     textAlign: 'center',
   },
   titleText: {
-    fontSize: '25px',
+    fontSize: 25, // Removed px, since React Native handles it in device pixels
     fontWeight: '700',
   },
   textDescription: {
+    fontWeight: '600',
     fontSize: 15,
   },
+  outerCircle: {
+    width: 140,
+    height: 140,
+    backgroundColor: '#00c8ff',
+    borderRadius: 70,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  innerCircle: {
+    width: 120,
+    height: 120,
+    backgroundColor: '#00c8ff',
+    borderRadius: 60,
+    borderWidth: 10,
+    borderColor: 'black',
+  },
 });
-export default DisplayAnImage;
+
+export default LoginScreen;
