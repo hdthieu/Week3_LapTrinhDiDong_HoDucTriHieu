@@ -48,11 +48,11 @@ const styles = StyleSheet.create({
     padding: 15,
     justifyContent: 'center',
     alignItems: 'center',
-    width: 119, // Fixed width without quotes
+    width: 119, 
     borderRadius: 5,
   },
   buttonText: {
-    color: 'dark', // White text for better visibility
+    color: 'dark',
     fontSize: 18,
     fontWeight: '700',
   },
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   titleText: {
-    fontSize: 25, // Removed px, since React Native handles it in device pixels
+    fontSize: 25, 
     fontWeight: '700',
   },
   textDescription: {
