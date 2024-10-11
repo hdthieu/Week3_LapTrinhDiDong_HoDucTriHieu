@@ -38,12 +38,35 @@ const LoginScreen2 = () => {
         </TouchableOpacity>
       </View>
       <View style={{ flex: 1 }}>
-        <Text>When you agree to terms and conditions</Text>
-        <Text>For got your password?</Text>
-        <Text>Or login with</Text>
+        <Text
+          style={[styles.styledescripAndforgotPass, { textAlign: 'center' }]}>
+          When you agree to terms and conditions
+        </Text>
+        <Text
+          style={[
+            styles.styledescripAndforgotPass,
+            { color: '#5D25FA', textAlign: 'center' },
+          ]}>
+          For got your password?
+        </Text>
+        <Text
+          style={[styles.styledescripAndforgotPass, { textAlign: 'center' }]}>
+          Or login with
+        </Text>
       </View>
-      <View style={{flex:1}}>
-        
+      <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }}>
+        <View>
+          <Image source={require('./assets/imgFB.png')} />
+          <Image style={styles.style_icon} source={require('./assets/icofacebook.png')} />
+        </View>
+        <View>
+          <Image source={require('./assets/imgZalo.png')} />
+          <Image style={[styles.style_icon, {width:25, height: 25}]} source={require('./assets/icozalo.png')} />
+        </View>
+        <View>
+          <Image source={require('./assets/imgGG.png')} />
+          <Image style={styles.style_icon} source={require('./assets/icogoogle.png')} />
+        </View>
       </View>
     </View>
   );
@@ -86,6 +109,19 @@ const styles = StyleSheet.create({
     backgroundColor: '#C4C4C4',
     width: 305,
     height: 45,
+  },
+  styledescripAndforgotPass: {
+    fontFamily: 'Roboto',
+    fontSize: 14,
+    fontWeight: 400,
+    margin: '1% 0 1%',
+  },
+  style_icon: {
+    width: 30,
+    height: 30,
+    position: 'absolute',
+    left: '35%',
+    top: '5%'
   },
 });
 

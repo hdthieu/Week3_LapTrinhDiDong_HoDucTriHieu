@@ -4,10 +4,8 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 const LoginScreen2 = () => {
   return (
-    <View style={{ flex: 1 }}>
-      <LinearGradient
-        style={{ flex: 1 }}
-        colors={['#C7F4F7', '#D1F4F6', '#E5F4F5', '#37D6F8', '#00CCF9']}>
+    <View style={{ flex: 1, backgroundColor: '#00CCF9' }}>
+     
         <View
           style={{
             flex: 1,
@@ -67,7 +65,7 @@ const LoginScreen2 = () => {
             fontWeight: '700',
             fontFamily: 'Roboto',}}>HOW WE WORK</Text>
         </View>
-      </LinearGradient>
+ 
     </View>
   );
 };
